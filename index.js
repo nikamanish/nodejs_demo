@@ -6,7 +6,7 @@ requestHandler = function(req, res){
 	if (req.url == '/') {
 		
 
-		result = randomNumber();
+		result = randomNumber() + " "+ randomNumber() + " " + randomNumber();
 		console.log(result);
 		res.end(result + " ");
 
@@ -19,6 +19,6 @@ requestHandler = function(req, res){
 
 var server = http.createServer(requestHandler);
 
-server.listen(9000, function(){
+server.listen(9100, function(){
 	console.log("Started server on port 8000");
 })
